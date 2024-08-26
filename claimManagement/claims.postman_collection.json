@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "5755f75f-3631-437b-9a85-d9a1b59180e3",
+		"name": "claims",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37423307"
+	},
+	"item": [
+		{
+			"name": "get all bills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/bills",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bill by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/bills/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bills",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10,\r\n    \"user_id\": 104,\r\n    \"claim_type\": \"education\",\r\n    \"claim_title\": \"Hostel Fee\",\r\n    \"date_of_spent\": \"2023-11-24\",\r\n    \"amount_spent\": \"20000.00\",\r\n    \"created_at\": \"2024-08-10\",\r\n    \"claim_details\": \"paid the hostel fee in the college\",\r\n    \"file_url\": \"https://drive.google.com/file/d/1T9AlYUVufJe08sFjmAHWQjfNO2B1MLyU/view\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bills/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bills",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 104,\r\n    \"claim_type\": \"education\",\r\n    \"claim_title\": \"Hostel Fee\",\r\n    \"date_of_spent\": \"2023-11-24\",\r\n    \"amount_spent\": \"20000.00\",\r\n    \"created_at\": \"2024-08-10\",\r\n    \"claim_details\": \"paid the hostel fee in the college\",\r\n    \"file_url\": \"https://drive.google.com/file/d/1T9AlYUVufJe08sFjmAHWQjfNO2B1MLyU/view\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/bills/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bills",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/bills/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bills",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

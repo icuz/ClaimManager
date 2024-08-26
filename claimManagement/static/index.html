@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <form id="billForm" action="http://localhost:8000/upload" method="post" enctype="multipart/form-data">
+        <h1>Claim Management</h1>
+        <input type="hidden" id="billId" />
+        <label for="userId">User ID:</label>
+        <input type="text" placeholder="enter employeeID" id="userId" required />
+        <label for="claimType">Claim Type:</label>
+        <select id="claimType" required>
+            <option value="" disabled selected>Select Claim Type</option>
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="grocery">Grocery</option>
+            <option value="education">Education</option>
+            <option value="medical">Medical</option>
+        </select>
+        <label for="claimTitle">Claim Title:</label>
+        <input type="text" placeholder="Enter title" id="claimTitle" required />
+        <label for="dateOfSpent">Date of Spent:</label>
+        <input type="date" placeholder="DD-MM-YYYY" id="dateOfSpent" required />
+        <label for="amountSpent">Amount Spent:</label>
+        <input type="number" placeholder="Amount in INR" step="0.01" id="amountSpent" required />
+        <label for="claimDetails">Claim Details:</label>
+        <textarea id="claimDetails" placeholder="Enter the details..."></textarea>
+        <input type="text" id="fileUrl" placeholder="Enter file URL" readonly hidden/>
+        <label for="fileInput">Upload Claim File:</label>
+        <div class="file-input-container">
+            <input type="file" id="fileInput" name="file" required>
+            <label for="fileInput" class="file-input-label">📁 Choose File</label>
+            <span id="file-name" class="file-name">No file chosen</span>
+        </div>
+        <button type="submit">Save Bill</button>
+        <button type="button" onclick="resetForm()">New Bill</button>
+    </form>
+
+    <!-- <button onclick="getBills()" type="button" id="fetchButton">Show All Bills</button> -->
+    <div id="bills"></div>
+</body>
+</html>
