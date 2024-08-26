@@ -1,4 +1,4 @@
-# everything in this project  is working fine. could have done better data validation. but i think it is fine for now. i will keep improving it.
+# ClaimManager
 
 # here is how to run this project:
 
